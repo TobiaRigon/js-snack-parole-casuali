@@ -1,11 +1,12 @@
-// stampa in console una frase di N parole generate da un' API
-
 const apiUrl = 'https://flynn.boolean.careers/exercises/api/random/word';
-const nParole = 5;
-let frase = '';
 
 let result = document.getElementById('result');
+let nParole = document.getElementById('n_parole');
+const createButton = document.getElementById('send');
 
+
+
+console.log(result)
 //effettua chiamata axios, inserisci la risposta nell array, per Nvolte
 
     function creaParola() {
@@ -17,18 +18,26 @@ let result = document.getElementById('result');
             console.log(error);
         });
     };
+
     async function creaFrase(){
-        for(let i = 0; i < nParole; i++){
+        let frase = '';
+        for(let i = 0; i < nParole.value ; i++){
             frase += await creaParola() + ' ';
         }
         console.log(frase);
         return frase;
     };
+
     async function stampaFrase(){
         let text = await creaFrase();
+        result.innerText = '';
         result.innerText = text;
     };
-    stampaFrase();
+    
+
+    createButton.addEventListener('click', function(){
+        stampaFrase();
+    } );
    
    
 
