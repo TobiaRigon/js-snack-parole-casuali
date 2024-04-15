@@ -24,13 +24,11 @@ console.log(result)
         for(let i = 0; i < nParole.value ; i++){
             frase += await creaParola() + ' ';
         }
-        console.log(frase);
         return frase;
     };
 
     async function stampaFrase(){
         let text = await creaFrase();
-        result.innerText = '';
         result.innerText = text;
     };
     
