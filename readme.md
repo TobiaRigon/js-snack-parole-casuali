@@ -2,7 +2,7 @@
 
 This project is a quick snack exercise aimed at generating and printing a sentence containing N words (where the value of N is defined by user input) using an API that generates random words. The technologies utilized in this project are JavaScript and Axios.:
 
-## Search Features:
+## Features:
 
 - User Input: The user can specify the number of words they want in the sentence.
 - API Interaction: The application interacts with an external API to fetch random words.
